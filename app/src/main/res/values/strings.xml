@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">D6_Android</string>
+    <string name="text_dice_roll">Нажмите кнопку, чтобы бросить кубик </string>
+    <string name="text_button_roll">Бросить кубик</string>
+
+    <string name="dice_image_content_description">D6 кубик</string>
 </resources>
