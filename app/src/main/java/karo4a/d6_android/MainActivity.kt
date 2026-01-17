@@ -1,4 +1,4 @@
-package com.example.d6_android
+package karo4a.d6_android
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

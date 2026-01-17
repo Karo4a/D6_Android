@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.d6_android"
+    namespace = "karo4a.d6_android"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.d6_android"
+        applicationId = "karo4a.d6_android"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
