@@ -1,35 +1,32 @@
 package karo4a.d6_android
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import karo4a.d6_android.databinding.ActivityMainBinding
 import kotlin.random.Random
 import kotlin.random.nextInt
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var rollButton: Button
-    private lateinit var rollText : TextView
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        rollText = findViewById(R.id.roll_textView)
-        rollButton = findViewById(R.id.roll_button)
-        rollButton.setOnClickListener { clickRollButton() }
+        binding.rollButton.setOnClickListener { clickRollButton() }
     }
 
     private fun clickRollButton() {
-        rollText.text = Random.Default.nextInt(1..6).toString()
+        binding.rollTextView.text = Random.Default.nextInt(1..6).toString()
     }
 }
